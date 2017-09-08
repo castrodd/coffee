@@ -32,5 +32,3 @@ formatter: function(value) {
 button.addEventListener('click', function() {
   slider.setValue(5);
 })
-
-// Achievement modal

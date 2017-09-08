@@ -1,3 +1,7 @@
 #ex1Slider .slider-selection {
 	background: #BABABA;
 }
+
+.modal-title, .modal-body {
+	text-align: center;
+}

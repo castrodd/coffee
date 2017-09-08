@@ -4,12 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>coffeerun</title>
+
+  <!-- favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap and jQuery -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+
+  <!-- bootstrap-slider -->
   <script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css">
+
   <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 
@@ -79,14 +86,15 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
+        <h4 class="modal-title" id="myModalLabel">Hidden Achievement Unlocked</h4>
       </div>
       <div class="modal-body">
-        You unlocked an achievement! Thanks to your monster appetite for caffeine, you now have access to secret ordering options. Do you want to use this power?
+        <h1>Congratulations!</h1>
+        <h5><em>Thanks to your love for caffeine, you now have access to secret ordering options. Do you want to use them?</em></h5>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default no" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-default yes" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-danger no" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-success yes" data-dismiss="modal">Yes</button>
       </div>
     </div>
   </div>
