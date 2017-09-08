@@ -28,6 +28,9 @@ formatter: function(value) {
 }
 });
 
+// Allow slider to change color
 button.addEventListener('click', function() {
   slider.setValue(5);
 })
+
+// Achievement modal

@@ -27,6 +27,9 @@
       fn(data);
       this.reset();
       this.elements[0].focus();
+      if (data['size'] === 'grandisimo' && data['strength'] === '10') {
+        $('#achievement').modal('show');
+      }
     })
   };
 
