@@ -36,6 +36,8 @@
             <label for="emailInput">Email</label>
             <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="you@email.com">
           </div>
+
+          <label class="cup-size">Size</label>
           <div class="radio">
             <label>
               <input type="radio" name="size" value="short">
@@ -54,12 +56,13 @@
               Grande
             </label>
           </div>
-            <div class="radio">
-              <label>
+          <div class="radio">
+            <label>
                 <input type="radio" name="size" value="grandisimo">
                 Grandisimo
               </label>
           </div>
+
           <div class="form-group">
             <label for="flavorShot">Flavor Shot</label>
             <select class="form-control" name="flavor" id="flavorShot">
@@ -73,6 +76,28 @@
             <label for="strengthLevel">Caffeine Rating</label>
             <input type="range" name="strength" id="strengthLevel" value="5" data-slider-id="ex1Slider" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5">
           </div>
+          <div class="special-options">
+            <label>Special Options</label>
+            <div class="radio">
+              <label>
+              <input type="radio" name="size" value="time-travel">
+              Time Travel
+            </label>
+            </div>
+            <div class="radio">
+              <label>
+              <input type="radio" name="size" value="mind-reading">
+              Mind Reading
+            </label>
+            </div>
+            <div class="radio">
+              <label>
+              <input type="radio" name="size" value="bug-free">
+              Bug-free Code
+            </label>
+            </div>
+          </div>
+
           <button type="submit" class="btn btn-default">Submit</button>
           <button type="reset" class="btn btn-default reset">Reset</button>
         </form>
@@ -81,25 +106,25 @@
   </section>
 
   <!-- Modal -->
-<div class="modal fade" id="achievement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Hidden Achievement Unlocked</h4>
-      </div>
-      <div class="modal-body">
-        <h1>Congratulations!</h1>
-        <h5><em>Thanks to your love for caffeine, you now have access to secret ordering options. Do you want to use them?</em></h5>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger no" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-success yes" data-dismiss="modal">Yes</button>
+  <div class="modal fade" id="achievement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Hidden Achievement Unlocked</h4>
+        </div>
+        <div class="modal-body">
+          <h1>Congratulations!</h1>
+          <h5><em>Thanks to your love for caffeine, you now have access to secret ordering options. Do you want to use them?</em></h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger no" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-success yes" data-dismiss="modal">Yes</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"> </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="scripts/formhandler.js" charset="utf-8"></script>
   <script type="text/javascript" src="scripts/datastore.js" charset="utf-8"></script>
   <script type="text/javascript" src="scripts/truck.js" charset="utf-8"></script>

@@ -31,6 +31,10 @@
       // Achievement modal
       if (data['size'] === 'grandisimo' && data['strength'] === '10') {
         $('#achievement').modal('show');
+        $('.yes').on('click', function() {
+          myTruck.addUser(data['emailAddress']);
+          console.log('Added Special User');
+        });
       }
     })
   };

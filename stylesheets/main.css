@@ -5,3 +5,11 @@
 .modal-title, .modal-body {
 	text-align: center;
 }
+
+.cup-size {
+	margin-bottom: 0;
+}
+
+.special-options {
+	display: none;
+}

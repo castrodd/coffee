@@ -11,6 +11,7 @@
 
   formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
   console.log(formHandler);
+
 }) (window);
 
 // Allow range bar to slide and reset
@@ -28,7 +29,17 @@ formatter: function(value) {
 }
 });
 
-// Allow slider to change color
+// Allow slider and Special Options to reset
 button.addEventListener('click', function() {
   slider.setValue(5);
+  $('.special-options').css('display', 'none');
 })
+
+
+// Check for Special Users
+$( "#emailInput" ).change(function() {
+  console.log($('#emailInput')[0]['value']);
+  if (myTruck.checkUser($('#emailInput')[0]['value'])) {
+    $('.special-options').css('display', 'block');
+  }
+});

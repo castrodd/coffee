@@ -5,6 +5,7 @@
   function Truck(truckId, db) {
     this.truckId = truckId;
     this.db = db;
+    this.users = {};
   }
 
   Truck.prototype.createOrder = function(order) {
@@ -28,6 +29,17 @@
     customerIdArray.forEach(function(id) {
       console.log(this.db.get(id));
     }.bind(this))
+  };
+
+  Truck.prototype.addUser = function(email) {
+    this.users[email] = true;
+  };
+
+  Truck.prototype.checkUser = function(email) {
+    if (this.users[email]) {
+      return true;
+    }
+    return false;
   };
 
   App.Truck = Truck;
