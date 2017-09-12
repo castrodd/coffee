@@ -38,7 +38,8 @@
   function Row(coffeeOrder) {
     var $div = $('<div></div>', {
       'data-coffee-order': 'checkbox',
-      'class': 'checkbox'
+      'class': 'checkbox',
+      'style': 'padding: 5px'
     });
     var $label = $('<label></label>');
     var $checkbox = $('<input></input>', {
@@ -49,6 +50,22 @@
     description += coffeeOrder.coffee;
     if (coffeeOrder.flavor) {
       description += ' w/ ' + coffeeOrder.flavor;
+      switch(coffeeOrder.flavor) {
+        case 'almond':
+          $div.css('background-color', '#946811');
+          $div.css('color', 'white');
+          break;
+        case 'caramel':
+          $div.css('background-color', '#cc7e0c');
+          $div.css('color', 'white');
+          break;
+        case 'mocha':
+          $div.css('background-color', 'chocolate');
+          $div.css('color', 'white');
+          break;
+        default:
+          break;
+      }
     }
     description += ', ' + ' (' + coffeeOrder.emailAddress + ')';
     $label.append($checkbox);
