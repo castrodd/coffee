@@ -30,11 +30,11 @@
         <form data-coffee-order="form">
           <div class="form-group">
             <label for="coffeeOrder">Coffee Order</label>
-            <input class="form-control" name="coffee" id="coffeeOrder" autofocus>
+            <input class="form-control" name="coffee" id="coffeeOrder" autofocus required pattern="[a-zA-Z\s]+" />
           </div>
           <div class="form-group">
             <label for="emailInput">Email</label>
-            <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="you@email.com">
+            <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="you@email.com" required />
           </div>
 
           <label class="cup-size">Size</label>
@@ -133,6 +133,7 @@
     </div>
   </div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="scripts/validation.js" charset="utf-8"></script>
   <script type="text/javascript" src="scripts/checklist.js" charset="utf-8"></script>
   <script type="text/javascript" src="scripts/formhandler.js" charset="utf-8"></script>
   <script type="text/javascript" src="scripts/datastore.js" charset="utf-8"></script>
