@@ -1,6 +1,7 @@
 (function (window) {
   'use strict';
   var App = window.App || {};
+  var RemoteDataStore = App.RemoteDataStore
 
   var Validation = {
     isCompanyEmail: function(email) {
