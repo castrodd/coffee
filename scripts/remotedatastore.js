@@ -2,6 +2,7 @@
   'use strict';
   var App = window.App || {};
   var $ = window.jQuery;
+  var checkpoint = "neither";
 
   function RemoteDataStore (url) {
     if (!url) {

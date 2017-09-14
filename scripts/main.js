@@ -27,6 +27,23 @@
   });
 
   formHandler.addInputHandler(Validation.isCompanyEmail);
+  $("#emailInput").addClass('error');
+
+  $('#emailInput').blur(function() {
+    remoteDB.get($('#emailInput')[0]['value'])
+    .done(function(data) {
+      if (!data) {
+        console.log("Email available.");
+        $('#emailInput').removeClass('error');
+      } else {
+        console.log("Email in db.");
+        $(":submit").click(function(e){
+          e.preventDefault();
+          alert('Email has a pending order.');
+        });
+      }
+    });
+  });
 
 }) (window);
 
@@ -59,3 +76,17 @@ $( "#emailInput" ).change(function() {
     $('.special-options').css('display', 'block');
   }
 });
+
+// Validate email address server-side
+// $(document).ready(function() {
+//   $("#emailInput").addClass('error');
+//
+//   $('#emailInput').change(function() {
+//     remoteDB.get(myTruck.checkUser($('#emailInput')[0]['value']))
+//     .done(function(data) {
+//       if (!data.responseJSON) {
+//         $('#emailInput').removeClass('error');
+//       }
+//     });
+//   });
+// });
