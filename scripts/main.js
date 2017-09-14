@@ -27,19 +27,19 @@
   });
 
   formHandler.addInputHandler(Validation.isCompanyEmail);
-  $("#emailInput").addClass('error');
 
   $('#emailInput').blur(function() {
+    $("#emailInput").addClass('error');
     remoteDB.get($('#emailInput')[0]['value'])
     .done(function(data) {
       if (!data) {
+        $("#emailInput").removeClass('error');
         console.log("Email available.");
-        $('#emailInput').removeClass('error');
       } else {
         console.log("Email in db.");
         $(":submit").click(function(e){
-          e.preventDefault();
           alert('Email has a pending order.');
+          e.preventDefault();
         });
       }
     });
