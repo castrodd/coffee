@@ -11,6 +11,7 @@
   var Validation = App.Validation;
   var CheckList = App.CheckList;
   var remoteDB = new RemoteDataStore(SERVER_URL);
+  var localDB = new DataStore();
   var myTruck = new Truck('Falcon', remoteDB);
   window.myTruck = myTruck;
   var checkList = new CheckList(CHECKLIST_SELECTOR);
