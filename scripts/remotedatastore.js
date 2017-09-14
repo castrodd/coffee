@@ -27,12 +27,15 @@
   };
 
   RemoteDataStore.prototype.get = function (key, cb) {
-    return $.get(this.serverURL + '/' + key, function(serverResponse) {
-      if (cb) {
-        console.log(serverResponse);
-        cb(serverResponse);
+    return $.get(
+      this.serverURL + '/' + key,
+      function(serverResponse) {
+        if (cb) {
+          console.log(serverResponse);
+          cb(serverResponse);
+        }
       }
-    });
+    );
   };
 
   RemoteDataStore.prototype.remove = function (key) {
